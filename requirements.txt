@@ -1,0 +1,12 @@
+bokeh
+dash
+folium
+gleam
+matplotlib
+notebook
+numpy
+pandas
+plotly
+plotnine
+pygal
+seaborn
