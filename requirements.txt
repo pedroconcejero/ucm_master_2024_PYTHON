@@ -10,3 +10,4 @@ plotly
 plotnine
 pygal
 seaborn
+shiny
