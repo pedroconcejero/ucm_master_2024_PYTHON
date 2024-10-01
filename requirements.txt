@@ -1,6 +1,7 @@
 bokeh
 dash
 folium
+geopandas
 gleam
 matplotlib
 notebook
