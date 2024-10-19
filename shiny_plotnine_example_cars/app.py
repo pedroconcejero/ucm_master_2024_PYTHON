@@ -15,7 +15,7 @@ continuas = df.select_dtypes(include=['int', 'float']).columns.tolist()
 
 app_ui = ui.page_fluid(
     ui.layout_sidebar(
-        ui.panel_sidebar(
+        ui.sidebar(
             ui.input_select('eje_x',
             'Elige variable para eje X', 
             continuas,
@@ -25,7 +25,7 @@ app_ui = ui.page_fluid(
             continuas,
             selected = continuas[1]),
         ),
-        ui.panel_main(
+        ui.card(
             ui.output_plot("plot"),
         ),
     ),
@@ -33,7 +33,7 @@ app_ui = ui.page_fluid(
 
 def server(input, output, session):
     @output
-    @render.plot(alt = "Scatterplot")
+    @render.plot(alt = "Gráfico Bivariante")
     def plot():
       p = ggplot(df, aes(x = str(input.eje_x()), 
                          y = str(input.eje_y()),
